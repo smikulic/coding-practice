@@ -23,7 +23,7 @@ const styles = {
   },
 };
 
-function ModalDialog({ children, title, onClose }) {
+function ModalDialog({ children, title, onClose }: any) {
   return (
     <div style={styles.overlay} onClick={onClose}>
       <div style={styles.modal}>
@@ -37,7 +37,7 @@ function ModalDialog({ children, title, onClose }) {
 }
 
 export function ModalDialogApp() {
-  const [title, setTitle] = useState("Modal Dialog");
+  const [title, _] = useState("Modal Dialog");
   const [modalOpen, setModalOpen] = useState(false);
 
   return (

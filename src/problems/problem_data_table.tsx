@@ -41,7 +41,7 @@ export function DataTable() {
     setPage(nextPage);
   };
 
-  const handlePageSize = (e) => {
+  const handlePageSize = (e: any) => {
     setPageSize(e.target?.value);
   };
 

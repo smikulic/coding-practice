@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 export function ChatApplication() {
-  const [messages, setMessages] = useState([]);
+  const [messages, setMessages] = useState<any>([]);
   const [inputText, setInputText] = useState("");
 
   const handleSend = () => {
@@ -20,11 +20,11 @@ export function ChatApplication() {
     }
   };
 
-  const handleInputText = (e) => {
+  const handleInputText = (e: any) => {
     setInputText(e.target.value);
   };
 
-  const handleKeyPress = (e) => {
+  const handleKeyPress = (e: any) => {
     if (e.key === "Enter") {
       handleSend();
     }
@@ -41,7 +41,7 @@ export function ChatApplication() {
     >
       {/* Create message container */}
       <div>
-        {messages.map((message) => {
+        {messages.map((message: any) => {
           return (
             <div key={message.id}>
               {message.timestamp}: {message.text}
