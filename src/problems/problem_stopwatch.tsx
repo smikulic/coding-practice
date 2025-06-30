@@ -9,9 +9,6 @@ export function Stopwatch() {
     console.log({ stopwatchRunning });
     if (stopwatchRunning) {
       const start = Date.now() - elapsedTime;
-      console.log(Date.now());
-      console.log(elapsedTime);
-      console.log({ start });
 
       timeRef.current = setTimeout(() => {
         setElapsedTime(Date.now() - start);

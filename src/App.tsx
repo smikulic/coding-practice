@@ -1,10 +1,10 @@
 import { useState } from "react";
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
 import { ChatApplication } from "./problems/problem_basic_react_chat_application";
 import { Tabs } from "./problems/problem_tabs";
 import { DigitalClock } from "./problems/problem_digital_clock";
 import { Stopwatch } from "./problems/problem_stopwatch";
+import { ModalDialogApp } from "./problems/problem_modal_dialog";
+import { DataTable } from "./problems/problem_data_table";
 import "./App.css";
 
 const problems = [
@@ -28,10 +28,19 @@ const problems = [
     label: "Stopwatch",
     render: <Stopwatch />,
   },
+  {
+    id: "modal-dialog",
+    label: "Modal Dialog",
+    render: <ModalDialogApp />,
+  },
+  {
+    id: "data-table",
+    label: "Data Table",
+    render: <DataTable />,
+  },
 ];
 
 function App() {
-  // const [count, setCount] = useState(0)
   const [activeProblem, setActiveProblem] = useState("chat");
 
   return (
@@ -73,28 +82,6 @@ function App() {
           })}
         </div>
       </div>
-
-
-      {/* <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p> */}
     </>
   );
 }
